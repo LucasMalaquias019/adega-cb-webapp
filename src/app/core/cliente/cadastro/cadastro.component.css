@@ -1,0 +1,16 @@
+.area-button button {
+    font-family: "agrandi-regular";
+    font-size: 17px;
+    background-color: red;
+    color: white;
+  }
+
+  .formulario-novo-cadastro {
+background-color: rgba(0, 0, 0, 0.76);
+border: 10px;
+}
+
+
+  ::ng-deep .example-full-width {
+    font-size: 12px;
+  }

@@ -1,0 +1,87 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+
+@font-face {
+    font-family: agrandi-regular;
+    src: url(assets/fonts/Agrandir/Agrandir-Regular.otf) format("opentype");
+  }
+
+  @font-face {
+    font-family: agrandi-light;
+    src: url(assets/fonts/Agrandir/Agrandir-GrandLight.otf) format("opentype");
+  }
+
+  .mat-elevation-z4 {
+	box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)
+}
+
+i {
+  color: black;
+}
+
+.mat-panel-title {
+  font-family: "agrandi-regular";
+  font-size: 30px;   
+}
+
+.mat-expansion-panel span {
+  font-size: 18px;
+  font-family: "agrandi-regular";
+}
+
+.mat-expansion-panel ul {
+  list-style-type: none;
+  width: 100%;
+}
+
+.mat-expansion-panel ul li {
+  cursor: pointer;
+  width: 100%;
+  padding-left: 8px;
+}
+
+.mat-expansion-panel-body {
+  padding-left: 0px !important;
+}
+
+.titulo-pagina {
+  font-family: "agrandi-regular";
+  font-size: 40px;
+  color: black;
+}
+
+
+
+button {
+  font-family: "agrandi-regular";
+}
+
+td, th, h3 {
+  font-family: "agrandi-regular";
+}
+
+
+tr {
+  cursor: pointer;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  border-color: black;
+}
+
+
+
+/* 
+  @font-face {
+    font-family: agrandi-regular;
+    src: url(assets/fonts/Agrandir/Agrandir-Regular.otf) format("opentype");
+  } */
+html, body { height: 100%; }
+body { margin: 0;   font-family: Roboto, "Helvetica Neue", sans-serif; }

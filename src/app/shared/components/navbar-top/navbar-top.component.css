@@ -1,0 +1,100 @@
+
+.navbar-brand {
+    font-family: "agrandi-regular";
+    font-size: 60px;
+}
+
+.navbar {
+ background-color: white;
+}
+
+.logotipo {
+  scale: 1.7;
+  z-index: -1;
+}
+
+
+
+.button-corner {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .mat-panel-title {
+    font-size: 25px;
+  }
+
+.offcanvas-header {
+    font-family: "agrandi-regular";
+}
+
+.nav-item a {
+    font-family: "agrandi-regular";   
+}
+
+.relogio-digital {
+    font-family: "agrandi-regular";   
+    font-size: 28px;
+}
+
+.mat-expansion-panel{
+    box-shadow: none !important;
+  }
+
+  ul li:hover {
+    border-left: 2px solid red;
+
+  }
+
+  .letreiro {
+    text-align: justify;
+  }
+  .letreiro h2 {
+    font-family: "agrandi-regular";   
+    font-size: 28px;
+    color: red;
+  }
+
+  .painel-informativo {
+    background-color: rgb(240, 6, 6);
+  }
+
+  .painel-informativo h4 {
+    font-family: "agrandi-regular";   
+    color: white;
+    font-size: 20px;
+  }
+
+  .painel-informativo h4 {
+    animation: moveToLeft 8s linear infinite;
+    animation-delay: 1ms;
+  }
+
+  .btn-user, .btn-avisos {
+    border-radius: 50px;
+  }
+
+  .btn-user:hover, .btn-avisos:hover {
+    background-color: red;
+    i-feather {
+      color: white;
+    }
+  }
+
+  @keyframes moveToLeft {
+    1% {
+      /* transform: translateX(10%) ; */
+    }
+
+    100% {
+      transform: translateX(90%);
+    }
+    
+    /* 75% {
+      transform: translateX(0px) translateY(200px);
+    } */
+    /* 100% {
+      transform: translateY(0px);
+    } */
+  }

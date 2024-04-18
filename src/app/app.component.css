@@ -1,0 +1,14 @@
+header {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+}
+
+main {
+   background-image: url("https://images.alphacoders.com/105/1056130.jpg");
+   background-position: center top;
+   background-size: 100%;
+   background-attachment: fixed;
+   background-repeat: no-repeat ;
+}
+

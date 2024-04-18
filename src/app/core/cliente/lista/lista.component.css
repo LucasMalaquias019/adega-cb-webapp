@@ -1,0 +1,55 @@
+.container-fluid {
+  padding-left: 30px;
+  padding-top: 155px;
+  background-color: rgba(0, 0, 0, 0.527);
+  height: 100vh;
+}
+
+table {
+  width: 100%;
+}
+
+.btn-buscar {
+  background-color: red;
+  border-radius: 20px;
+}
+
+.btn-edit, .btn-delete {
+  border-radius: 20px;
+}
+
+.btn-edit i-feather, .btn-delete i-feather {
+  color: red;
+}
+
+.btn-edit:hover, .btn-delete:hover {
+  background-color: red;
+  i-feather {
+    color: white;
+  }
+}
+
+
+
+.btn-buscar i-feather {
+  color: white !important;
+}
+
+.card {
+  background: #ebe5e759 !important;
+
+}
+
+.titulo-pagina {
+  color: white;
+}
+
+.mat-form-field {
+  background: #ebe5e759 !important;
+
+}
+
+::ng-deep .mat-mdc-text-field-wrapper, .mdc-text-field {
+  background: #ebe5e759 !important;
+
+}
