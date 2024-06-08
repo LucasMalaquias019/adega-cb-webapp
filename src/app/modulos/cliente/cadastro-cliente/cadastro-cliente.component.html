@@ -1,0 +1,140 @@
+<div class="container-fluid">
+    <form action="">
+        <div class="row w-100 d-flex ps-5 pe-5 justify-content-center">
+            <div class="card mt-5">
+                <div class="row justify-content-center d-flex pt-3 pb-3">
+                    <div class="col-4 ps-4 pe-4 titulo-pagina d-flex justify-content-center pt-2">
+                        <h2>CADASTRAR NOVO CLIENTE</h2>
+                    </div>
+                </div>
+
+                <div class="row d-flex">
+                    <div class="col pb-5 d-flex justify-content-center">
+                        <mat-stepper linear #stepper>
+                            <mat-step>
+                                <div class="row pt-3">
+                                    <div class="col-8 d-flex">
+                                        <ng-template matStepLabel>DADOS PESSOAIS</ng-template>
+                                        <mat-form-field class="me-3 col-2 fields">
+                                            <mat-label>CPF</mat-label>
+                                            <input matInput name="cpf" type="text" mask="000.000.000-00"
+                                                placeholder="Digite o CPF">
+                                        </mat-form-field>
+
+                                        <mat-form-field class="me-3 col-4">
+                                            <mat-label>Digite o Nome Completo</mat-label>
+                                            <input matInput name="nomeCompleto" type="text"
+                                                placeholder="Ex. Lucas Malaquias C da Silva">
+                                        </mat-form-field>
+
+                                        <mat-form-field class="me-3 col-2">
+                                            <mat-label>Data nascimento</mat-label>
+                                            <input matInput name="dataNascimento" type="text" mask="d0/M0/0000"
+                                                placeholder="Ex. 10/11/2000">
+                                        </mat-form-field>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">
+                                        <mat-form-field class="me-3 col-2">
+                                            <mat-label>RG</mat-label>
+                                            <input matInput name="rg" type="text" mask="00.000.000-0"
+                                                placeholder="Ex. 38.785.114-8">
+                                        </mat-form-field>
+
+                                        <mat-form-field class="me-3 col-2">
+                                            <mat-label>Celular</mat-label>
+                                            <input matInput name="celular" type="text" mask="d0/M0/0000"
+                                                placeholder="Ex. (19) 99433-0639">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="justify-content-end d-flex">
+                                        <button mat-button class="btn-step-next" matStepperNext>
+                                            <i-feather name="chevron-right"></i-feather>
+                                        </button>
+                                    </div>
+                                </div>
+
+
+                            </mat-step>
+                            <mat-step>
+                                <ng-template matStepLabel>ENDEREÇO</ng-template>
+
+                                <form [formGroup]="secondFormGroup">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <mat-form-field class="col-2">
+                                                <mat-label>CEP</mat-label>
+                                                <input name="cep" matInput mask="00000-000" type="text"
+                                                    placeholder="Ex. 13349-053">
+                                            </mat-form-field>
+
+                                            <mat-form-field class="col-5 ms-3">
+                                                <mat-label>Rua</mat-label>
+                                                <input matInput name="nomeRua" type="text"
+                                                    placeholder="Ex. Rua Jangada do Campo">
+                                            </mat-form-field>
+
+
+                                            <mat-form-field class="col-1 ms-3">
+                                                <mat-label>Número</mat-label>
+                                                <input matInput name="numero" type="text" placeholder="Ex. 71">
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <mat-form-field class="col-2">
+                                                <mat-label>Tipo de residencia</mat-label>
+                                                <mat-select>
+                                                    <mat-option *ngFor="let tipo of tiposResidencias"
+                                                        [value]="tipo">{{tipo}}</mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+
+                                            <mat-form-field class="col-2 ms-3">
+                                                <mat-label>Condomínio</mat-label>
+                                                <mat-select>
+                                                    <mat-option *ngFor="let condominio of condominios"
+                                                        [value]="condominio">{{condominio}}</mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+
+
+                                            <mat-form-field class="col-2 ms-3">
+                                                <mat-label>Bairro</mat-label>
+                                                <input matInput name="bairro" type="text"
+                                                    placeholder="Ex. Campo Bonito">
+                                            </mat-form-field>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="justify-content-end d-flex justify-content-between">
+                                        <button mat-button class="btn-step-back" matStepperPrevious>
+                                            <i-feather name="chevron-left"></i-feather>
+                                        </button>
+                                        <button mat-button class="btn-step-next" matStepperNext>
+                                            <i-feather name="chevron-right"></i-feather>
+                                        </button>
+                                    </div>
+                                </form>
+                            </mat-step>
+                            <mat-step>
+                                <ng-template matStepLabel>FINALIZADO</ng-template>
+                                <p>You are now done.</p>
+                                <div>
+                                    <button mat-button matStepperPrevious>Back</button>
+                                    <button mat-button (click)="stepper.reset()">Reset</button>
+                                </div>
+                            </mat-step>
+                        </mat-stepper>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</div>

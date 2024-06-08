@@ -3,29 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
-import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial/pagina-inicial.component';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CoreModule } from './core/core.module';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { ClienteModule } from './modulos/cliente/cliente.module';
+
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PaginaInicialComponent,
-
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
+    ClienteModule,
     BrowserAnimationsModule,
-    CoreModule,
-    SweetAlert2Module.forRoot()
-
+    SweetAlert2Module.forRoot(),
   ],
   exports: [RouterModule],
   providers: [],

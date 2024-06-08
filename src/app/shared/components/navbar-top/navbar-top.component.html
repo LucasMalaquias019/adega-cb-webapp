@@ -18,15 +18,29 @@
         <button mat-button class="btn-avisos">
           <i-feather name="bell"></i-feather>
         </button>
-        <button mat-button class="btn-user">
+        <button mat-button [matMenuTriggerFor]="menu" class="btn-user">
           <i-feather name="user" class="icon-user"></i-feather>
         </button>
+
+        <mat-menu class="menu-usuario" #menu="matMenu">
+          <button class="d-flex" mat-menu-item>
+            <i class="bi bi-person-circle"></i>
+            Ver perfil</button>
+          <button mat-menu-item>
+            <i-feather name="log-out" ></i-feather>
+            Logout</button>
+        </mat-menu>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col painel-informativo pt-1 mat-elevation-z4">
-        <h4 class="me-4 ps-3 fw-bold">♧ ♡ ♤ ♢ ADEGA DO CB - O Coringa das bebidas ♧ ♡ ♤ ♢ INDAIATUBA,  16 DE ABRIL de 2024  ♧ ♡ ♤ ♢ - SKOL LATA R$3,75 ♧ ♡ ♤ ♢ - BRAHMA LATA R$3,75 ♧ ♡ ♤ ♢ - HEINEKEN R$6,00 ♧ ♡ ♤ ♢</h4>
+    <div class="row p-0">
+      <div class="col painel-informativo d-flex mat-elevation-z4 pt-2">
+        <div  class="col-3 ">
+          <h3 style="border-right: 3px solid white;" class="informativo-data ps-3 pe-3 fw-bold justify-content-center">INDAIATUBA,  16 DE ABRIL de 2024</h3>
+        </div>
+        <div class="col painel-informativo-rotativo justify-content-center d-flex">
+          <h4 class="me-4 ps-3 fw-bold">♧ ♡ ♤ ♢ ADEGA DO CB ♧ ♡ ♤ ♢ ADEGA DO CB ♧ ♡ ♤ ♢ ADEGA DO CB ♧ ♡ ♤ ♢</h4>
+        </div>
       </div>
     </div>
 
@@ -52,10 +66,10 @@
                 </mat-panel-description>
               </mat-expansion-panel-header>
               <ul>
-                <li class="mb-3">
+                <li class="mb-3" routerLink="/cadastrar-cliente" data-bs-dismiss="offcanvas">
                   <span>Cadastrar</span>
                 </li>
-                <li>
+                <li routerLink="/clientes" data-bs-dismiss="offcanvas">
                   <span>Listar</span>
                 </li>
               </ul>

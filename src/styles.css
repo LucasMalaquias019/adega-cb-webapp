@@ -17,6 +17,14 @@
 	box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)
 }
 
+.mat-mdc-tab .mdc-tab-indicator__content--underline {
+  border-color: red;
+}
+
+.card {
+  background: #ebe5e759 !important;
+}
+
 i {
   color: black;
 }
@@ -48,15 +56,53 @@ i {
 
 .titulo-pagina {
   font-family: "agrandi-regular";
-  font-size: 40px;
-  color: black;
+  color: white;
+  background-color: rgba(19, 18, 18, 0.562);
+  border-radius: 10px;
+  text-align: center;
 }
 
 
+.mat-step-icon.mat-step-icon-state-number.mat-step-icon-selected {
+  background-color: rgba(255, 0, 0, 0.774);
+}
+
+.mat-step-icon.mat-step-icon-state-edit {
+  background-color: black;
+}
 
 button {
   font-family: "agrandi-regular";
 }
+
+.btn-padrao {
+  background-color: red;
+}
+
+
+button, mat-label {
+  font-family: "agrandi-regular" !important;
+}
+
+.mat-mdc-tab .mdc-tab-indicator__content--underline {
+  border-color: red !important;
+}
+
+  .mat-mdc-tab.mdc-tab {
+    font-family: "agrandi-regular";
+    font-weight: bold;
+    border-bottom: red !important;
+}
+
+.mat-mdc-tab.mdc-tab.mdc-tab.mdc-tab--active {
+  background-color: rgba(19, 18, 18, 0.671);
+  font-weight: 900;
+}
+
+.mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  color: white !important;
+}
+
 
 td, th, h3 {
   font-family: "agrandi-regular";
@@ -76,6 +122,26 @@ tr {
   border-color: black;
 }
 
+.mat-step-header .mat-step-label .mat-step-text-label {
+  font-family: "agrandi-regular";
+  font-weight: 600;
+}
+
+.mat-mdc-option.mdc-list-item {
+  font-family: 'agrandi-regular';
+  font-weight: 600;
+
+  &:hover {
+    background-color: black;
+    color: white;
+  
+  }
+  
+}
+
+.mat-select {
+  font-family: "agrandi-regular";
+}
 
 
 /* 
@@ -84,4 +150,8 @@ tr {
     src: url(assets/fonts/Agrandir/Agrandir-Regular.otf) format("opentype");
   } */
 html, body { height: 100%; }
-body { margin: 0;   font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+  /* background: url("https://images.alphacoders.com/105/1056130.jpg") center top; */
+  background-size: cover;
+
+  margin: 0;  font-family: Roboto, "Helvetica Neue", sans-serif; }

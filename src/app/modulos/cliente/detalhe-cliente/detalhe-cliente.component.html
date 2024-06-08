@@ -1,0 +1,211 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 pt-5 d-flex justify-content-center">
+            <div class="card pt-5 w-75 ">
+                <form action="" [formGroup]="formCliente">
+                    <div class="row justify-content-center align-items-center ps-3 pb-3 w-100 d-flex">
+                        <div class="col-10 ps-5 justify-content-center align-items-center d-flex">
+                            <span
+                                class="nome-cliente mat-elevation-z4 d-flex  mt-2 pt-2 pb-0 justify-content-center align-items-center ps-5 pe-5">
+                                <h2 *ngIf="cliente" class="cod-cliente fw-bold">0{{cliente.id}}#</h2>
+                                <h2 *ngIf="cliente">/{{formCliente.controls['nomeCompleto'].value}}</h2>
+                            </span>
+                        </div>
+                        <div class="col d-flex justify-content-center align-items-center">
+
+                            <button mat-button class="d-flex justify-content-center btn-save mat-elevation-z4 me-3"
+                                (click)="confirmarAlteracaoDados()">
+                                <i-feather name="save"></i-feather>
+                                Salvar
+                            </button>
+
+                            <button mat-button class="d-flex justify-content-center btn-excluir mat-elevation-z4"
+                                (click)="excluirCadastro()">
+                                <i-feather name="trash2"></i-feather>
+                                Excluir
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="row pt-2 pb-3">
+                        <div class="col">
+                            <mat-tab-group class="ps-3" mat-stretch-tabs="false" mat-align-tabs="start">
+                                <mat-tab class="d-flex justify-content-center" label="DADOS PESSOAIS">
+                                    <div class="row w-100 ps-3 pt-5 d-flex">
+                                        <div class="col-2 pe-0">
+                                            <mat-form-field class="me-2 col-12">
+                                                <mat-label>CPF</mat-label>
+                                                <input matInput name="cpf" formControlName="cpf" type="text"
+                                                    mask="000.000.000-00" placeholder="Digite o CPF" required>
+                                            </mat-form-field>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <mat-form-field class="me-2 col-12">
+                                                <mat-label>Digite o Nome Completo</mat-label>
+                                                <input matInput name="nomeCompleto" formControlName="nomeCompleto"
+                                                    type="text" placeholder="Ex. Lucas Malaquias C da Silva" required>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-2">
+                                            <mat-form-field class="me-2 col-12">
+                                                <mat-label>Data Nasc.</mat-label>
+                                                <input matInput name="dataNascimento" formControlName="dataNascimento"
+                                                    type="text" mask="d0/M0/0000" placeholder="Ex. 10/11/2000" required>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="row w-100 ps-3">
+                                        <div class="col-2 pe-0">
+                                            <mat-form-field class="me-3 col-12">
+                                                <mat-label>RG</mat-label>
+                                                <input matInput name="rg" formControlName="rg" type="text"
+                                                    mask="00.000.000-0" placeholder="Ex. 38.785.114-8" required>
+                                            </mat-form-field>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <mat-form-field class="me-3 col-12">
+                                                <mat-label>Celular</mat-label>
+                                                <input matInput name="celular" formControlName="celular" type="text"
+                                                    mask="(00)00000-0000" placeholder="Ex. (19) 99433-0639" required>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                </mat-tab>
+                                <mat-tab label="ENDEREÇO">
+                                    <div class="row w-100 ps-3 pt-5">
+                                        <div class="col-2 pe-0">
+                                            <mat-form-field class="col-12">
+                                                <mat-label>CEP</mat-label>
+                                                <input name="cep" formControlName="cep" matInput mask="00000-000"
+                                                    type="text" placeholder="0000-000" required>
+                                            </mat-form-field>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <mat-form-field class="col-12 ms-3">
+                                                <mat-label>Rua</mat-label>
+                                                <input matInput name="nomeRua" formControlName="nomeRua" type="text"
+                                                    placeholder="Ex. Rua Jangada do Campo" required>
+                                            </mat-form-field>
+
+                                        </div>
+                                        <div class="col-1">
+                                            <mat-form-field class="col-10 ms-3">
+                                                <mat-label>Número</mat-label>
+                                                <input matInput name="numero" formControlName="numero" type="text"
+                                                    placeholder="Ex. 71" required>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="row w-100 ps-3">
+                                        <div class="col-2 pe-0">
+                                            <mat-form-field class="col-12">
+                                                <mat-label>Tipo de moradia</mat-label>
+                                                <mat-select (selectionChange)="selecionaTipoMoradia($event)">
+                                                    <mat-option *ngFor="let tipo of tiposResidencias"
+                                                        [value]="tipo">{{tipo}}</mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
+
+                                        <div class="col-2" *ngIf="tipoResidenciaSelecionada !== 'Casa'">
+                                            <mat-form-field class="col-12 ms-3">
+                                                <mat-label>Condomínio</mat-label>
+                                                <mat-select>
+                                                    <mat-option *ngFor="let condominio of condominios"
+                                                        [value]="condominio">{{condominio}}</mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+
+                                        </div>
+                                        <div class="col-2">
+                                            <mat-form-field class="col-12 ms-3">
+                                                <mat-label>Bairro</mat-label>
+                                                <input matInput name="bairro" formControlName="bairro" type="text"
+                                                    placeholder="Ex. Campo Bonito">
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                </mat-tab>
+
+                                <mat-tab label="HISTÓRICO CONTA">
+                                    <div class="row w-100">
+                                        <div class="col-10 d-flex justify-content-end">
+                                            <button mat-button class="btn-marcar-item mat-elevation-z4" (click)="openDialog()">
+                                                <i-feather name="plus"></i-feather>
+                                                Marcar item
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row w-100 pt-3 justify-content-center">
+                                        <div *ngIf="cliente" class="col-6 mb-3">
+                                            <mat-accordion class="pb-3" *ngFor="let conta of cliente.historicoConta">
+                                                <mat-expansion-panel class="mb-3 mt-3" (opened)="panelOpenState = true"
+                                                    (closed)="panelOpenState = false">
+                                                    <mat-expansion-panel-header>
+                                                        <mat-panel-title>
+                                                            Ultimo pedido: {{conta.dataRetirada}}
+                                                        </mat-panel-title>
+                                                        <mat-panel-description
+                                                            class="col-2 d-flex justify-content-between">
+                                                            Pagamento para: {{conta.dataPgto}}
+                                                            <button mat-button class="btn-marcar-item mat-elevation-z4 mb-1 p-1" (click)="openDialog(conta)">
+                                                                <i-feather name="plus"></i-feather>
+                                                            </button>
+                                                        </mat-panel-description>
+
+                                                    </mat-expansion-panel-header>
+                                                    <div class="row ps-3">
+                                                        <div class="col-12 ps-3">
+                                                            <mat-list class="">
+                                                                <mat-list-item
+                                                                    *ngFor="let itens of conta.itensMarcados">
+                                                                    <span
+                                                                        class="descricao-item d-flex align-items-center justify-content-between">
+                                                                        <h5 class="me-3">{{itens.quantidade}}x
+                                                                            {{itens.descricao}} {{itens.tamanho}}
+                                                                        </h5>
+                                                                        <h6>R$ {{itens.valorUnt}}</h6>
+                                                                    </span>
+                                                                </mat-list-item>
+                                                                <mat-divider></mat-divider>
+                                                            </mat-list>
+                                                        </div>
+                                                        <div class="col-12 ps-3 d-flex justify-content-between">
+                                                            <span class="fw-bold">Total</span>
+                                                            <button mat-button class="btn-padrao ps-3 pe-3">Pagar
+                                                                conta</button>
+                                                            <span class="fw-bold">R$20,00</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="total-conta d-flex justify-content-between">
+                                                    </div>
+                                                </mat-expansion-panel>
+                                            </mat-accordion>
+                                        </div>
+                                    </div>
+                                </mat-tab>
+                            </mat-tab-group>
+                        </div>
+                    </div>
+
+                    <div class="row w-100 ps-3 pt-3">
+                        <div class="col-12 d-flex justify-content-between ps-3 area-button pb-3">
+
+                            <button mat-button class="d-flex justify-content-center btn-cancel mat-elevation-z4">
+                                <i-feather name="x-circle"></i-feather>
+                                Cancelar
+                            </button>
+
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
