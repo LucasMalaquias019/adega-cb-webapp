@@ -1,0 +1,28 @@
+.titulo-modal {
+  font-family: "agrandi-regular";
+  text-align: center;
+}
+
+.btn-marcar {
+    background-color: red;
+    color: white;
+}
+
+.btn-cancelar {
+    background-color: rgba(0, 0, 0, 0.623);
+    color: white;
+}
+
+::ng-deep .mat-input-element {
+    font-family: "agrandi-regular";
+  }
+
+::ng-deep .mat-option {
+
+    &:hover {
+        background-color: black;
+        color: white;
+    }
+}
+
+

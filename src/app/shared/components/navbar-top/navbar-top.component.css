@@ -13,7 +13,9 @@
   z-index: -1;
 }
 
-
+/* h4 {
+  scale: 1.8;
+} */
 
 .button-corner {
     position: fixed;
@@ -58,18 +60,27 @@
 
   .painel-informativo {
     background-color: rgb(240, 6, 6);
+    /* font-size: 25px; */
+    color: white;
   }
 
-  .painel-informativo h4 {
+  .painel-informativo h4, h3 {
     font-family: "agrandi-regular";   
     color: white;
     font-size: 20px;
+    align-items: center;
+
   }
 
   .painel-informativo h4 {
-    animation: moveToLeft 8s linear infinite;
-    animation-delay: 1ms;
+    /* animation: moveToLeft 5s linear infinite; */
+    animation-delay: 0ms;
   }
+
+  .painel-informativo-rotativo {
+    animation: moveToLeft 7s linear infinite;
+    scale: 1.3;
+}
 
   .btn-user, .btn-avisos {
     border-radius: 50px;
@@ -83,9 +94,10 @@
   }
 
   @keyframes moveToLeft {
-    1% {
-      /* transform: translateX(10%) ; */
-    }
+0% {
+  margin-left: 50px;
+
+}   
 
     100% {
       transform: translateX(90%);

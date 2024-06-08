@@ -1,0 +1,100 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "nomeCompleto": "Lucas Malaquias C da Silva",
+      "cpf": "364.861.558-09",
+      "dataNascimento": "14/11/2001",
+      "rg": "387851148",
+      "celular": "19994330639",
+      "endereco": {
+        "cep": "13349053",
+        "rua": "Jangada do Campo",
+        "numero": "71",
+        "tipoMoradia": "COND",
+        "bairro": "Campo bonito"
+      },
+      "historicoConta": [
+        {
+          "dataRetirada": "22/02/2024",
+          "dataPgto": "10/05/2024",
+          "itensMarcados": [ 
+            {"quantidade": 1, "descricao": "Coca-cola Retornavel", "tamanho": "2L", "valorUnt": 7.50 },
+            {"quantidade": 1, "descricao": "Doritos", "tamanho": "P", "valorUnt": 5.00 },
+            {"quantidade": 2, "descricao": "Cerveja SKOL", "tamanho": "350ml", "valorUnt": 7.50 }
+          ]
+        },
+
+        {
+          "dataRetirada": "22/02/2024",
+          "dataPgto": "30/04/2024",
+          "itensMarcados": [ 
+            {"quantidade": 1, "descricao": "Coca-cola Retornavel", "tamanho": "2L", "valorUnt": 7.50 },
+            {"quantidade": 1, "descricao": "Doritos", "tamanho": "P", "valorUnt": 5.00 },
+            {"quantidade": 2, "descricao": "Cerveja SKOL", "tamanho": "350ml", "valorUnt": 7.50 }
+          ]
+        },
+        {
+          "dataRetirada": "22/02/2024",
+          "dataPgto": "30/04/2024",
+          "itensMarcados": [ 
+            {"quantidade": 1, "descricao": "Coca-cola Retornavel", "tamanho": "2L", "valorUnt": 7.50 },
+            {"quantidade": 1, "descricao": "Doritos", "tamanho": "P", "valorUnt": 5.00 },
+            {"quantidade": 2, "descricao": "Cerveja SKOL", "tamanho": "350ml", "valorUnt": 7.50 }
+          ]
+        }
+      ],
+      "saldo": "R$100,00",
+      "debito": "R$200,00"
+    },
+    {
+      "id": 2,
+      "nomeCompleto": "Jean Sales",
+      "cpf": "123.456.789-10",
+      "dataNascimento": "14/11/2001",
+      "rg": "387851148",
+      "celular": "19994330639",
+      "endereco": {
+        "cep": "13349053",
+        "rua": "Jangada do Campo",
+        "numero": "71",
+        "tipoMoradia": "COND",
+        "bairro": "Campo bonito"
+      },
+      "saldo": "R$100,00",
+      "debito": "R$50,00"
+    },
+    {
+      "id": 3,
+      "nomeCompleto": "Rafael da Silva",
+      "cpf": "789.256.789-10",
+      "dataNascimento": "14/11/2001",
+      "rg": "387851148",
+      "celular": "19994330639",
+      "endereco": {
+        "cep": "13349053",
+        "rua": "Jangada do Campo",
+        "numero": "71",
+        "tipoMoradia": "COND",
+        "bairro": "Campo bonito"
+      },
+      "saldo": "R$50,00",
+      "debito": "R$150,00"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NavbarTopComponent } from './components/navbar-top/navbar-top.component';
-import { MatExpansionModule } from '@angular/material/expansion';
 
 import { RouterModule } from '@angular/router';
-import { MatButtonModule } from '@angular/material/button';
-import { IconsModule } from 'src/assets/icons/icons.module';
+import { MaterialModule } from '../modulos/material/material.module';
+import { MarcarItemComponent } from './components/marcar-item/marcar-item.component';
+import { NgxMaskDirective } from 'ngx-mask';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -13,13 +15,18 @@ import { IconsModule } from 'src/assets/icons/icons.module';
 @NgModule({
   declarations: [
     NavbarTopComponent,
+    MarcarItemComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule,
-    MatExpansionModule,
-    MatButtonModule,
-     IconsModule
+    MaterialModule,
+    NgxMaskDirective,
+    FormsModule,
+    CommonModule,
+    ReactiveFormsModule
+
+
   ],
   exports: [NavbarTopComponent],
   providers: [],

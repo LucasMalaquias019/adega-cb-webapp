@@ -1,19 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FeatherModule } from 'angular-feather';
-import { Camera, Heart, Github, LogIn, Bell, Search, User, UserPlus, Edit, Trash2 } from 'angular-feather/icons';
+import { Camera, Heart, Github, LogIn, Bell, Search, User, UserPlus, Edit, Trash2, ChevronRight, ChevronLeft, LogOut, Save, XCircle, Plus } from 'angular-feather/icons';
 
 const icons = {
   Camera,
   Heart,
   Github,
-  LogIn, 
+  LogIn,
+  LogOut,
   Bell,
   Search,
   User,
   UserPlus,
   Edit,
-  Trash2
+  Trash2,
+  ChevronRight,
+  ChevronLeft,
+  Save,
+  XCircle,
+  Plus
 };
 
 

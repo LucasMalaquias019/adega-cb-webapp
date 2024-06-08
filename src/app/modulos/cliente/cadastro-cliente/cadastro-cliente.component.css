@@ -1,0 +1,52 @@
+.container-fluid {
+  padding-left: 30px;
+  padding-top: 155px;
+  background-color: rgba(0, 0, 0, 0.527);
+  height: 100vh;
+}
+
+.titulo-pagina {
+  color: white;
+}
+.area-button button {
+  font-family: "agrandi-regular";
+  font-size: 17px;
+  background-color: red;
+  color: white;
+}
+
+.formulario-novo-cadastro {
+  background-color: rgba(0, 0, 0, 0.76);
+  border: 10px;
+}
+
+mat-form-field, mat-form-field mat-label, mat-select {
+  font-family: "agrandi-regular" !important;
+  font-size: 13.5px;
+  font-weight: bold;
+  color: black;
+}
+
+mat-stepper {
+  border-radius: 30px;
+  width: 90%;
+  background: #ebe5e759 !important;
+
+}
+
+.btn-step-next, .btn-step-back {
+  color: white;
+  border-radius: 40px;
+}
+
+.btn-step-next {
+  background-color: red;
+}
+
+.btn-step-back {
+  background-color: black;
+}
+
+::ng-deep .example-full-width {
+  font-size: 12px;
+}

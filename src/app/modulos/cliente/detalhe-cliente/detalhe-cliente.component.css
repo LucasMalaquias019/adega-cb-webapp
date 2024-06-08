@@ -1,0 +1,82 @@
+.container-fluid {
+    padding-left: 30px;
+    padding-top: 155px;
+    background-color: rgba(0, 0, 0, 0.452);
+    height: 180vh;
+}
+
+.cod-cliente {
+    color: red;
+    text-shadow: 1px 1px white;
+}
+
+.card {
+    width: 80%;
+}
+
+.nome-cliente {
+    font-family: "agrandi-regular";
+    color: white;
+    background-color: rgba(19, 18, 18, 0.562);
+    border-radius: 10px;
+}
+
+mat-form-field,
+mat-form-field mat-label,
+mat-select {
+    font-family: "agrandi-regular" !important;
+    font-size: 13.4px;
+    font-weight: bold;
+    color: black;
+}
+
+button {
+    /* border-radius: 30px; */
+    font-family: "agrandi-regular";
+    justify-content: center;
+    font-weight: 600;
+}
+
+
+.btn-save, .btn-marcar-item {
+    color: white;
+    background-color: red;
+
+    &:hover {
+        background-color: white;
+        color: red;
+    }
+}
+
+.btn-excluir {
+    background-color: white;
+    font-weight: 600;
+    &:hover {
+        background-color: black;
+        color: white;
+    }
+}
+
+.btn-padrao {
+    background-color: red;
+    color: white;
+    /* padding: 4px; */
+  
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+
+.btn-cancel {
+    background-color: rgba(0, 0, 0, 0.623);
+    color: white;
+}
+
+::ng-deep .mat-mdc-list-item {
+    height: 100px;
+}
+
+.mat-expansion-panel-header-title {
+    font-size: 15px;
+}
