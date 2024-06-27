@@ -39,8 +39,16 @@ mat-stepper {
   border-radius: 40px;
 }
 
-.btn-step-next {
+.btn-step-next, .btn-salvar {
   background-color: red;
+  color: white;
+  font-size: 17px;
+  border-radius: 20px;
+}
+
+.btn-salvar:hover {
+  background-color: black;
+  color: white;
 }
 
 .btn-step-back {

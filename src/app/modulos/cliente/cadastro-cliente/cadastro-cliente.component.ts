@@ -1,5 +1,5 @@
 import { AfterViewInit, Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { interval } from 'rxjs';
 
 @Component({
@@ -8,21 +8,26 @@ import { interval } from 'rxjs';
   styleUrls: ['./cadastro-cliente.component.css']
 })
 export class CadastroClienteComponent implements AfterViewInit {
-  firstFormGroup = this._formBuilder.group({
-    firstCtrl: ['', Validators.required],
-  });
-  secondFormGroup = this._formBuilder.group({
-    secondCtrl: ['', Validators.required],
-  });
-
   panelOpenState = false;
   condominios = ["Teka", "Pinnus", "Embaúba", "Copaíba", "Angelin",  "Araçá", "Ingá", "Garapá"];
   tiposResidencias = ["Casa", "Condomínio"];
 
   public barCode: any;
+  formCliente: FormGroup;
 
   constructor(private _formBuilder: FormBuilder) {
-
+    this.formCliente = _formBuilder.group({
+      cpf: [null],
+      nomeCompleto: [null],
+      dtNascimento: [null],
+      rg: [null],
+      celular: [null],
+      cep: [null],
+      nomeRua: [null],
+      numeroCasa: [null],
+      bairro: [null]
+      
+    })
   }
 
   test() {
@@ -50,7 +55,6 @@ export class CadastroClienteComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    // this.test();
     console.log("OOO")
   }
 }
